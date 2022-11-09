@@ -12,5 +12,11 @@ func main() {
 			"name": "hhh",
 		})
 	})
+	r.GET("/zty", func(context *gin.Context) {
+		context.JSON(http.StatusOK, gin.H{
+			"age": 12,
+		})
+	})
+
 	r.Run(":9090")
 }
